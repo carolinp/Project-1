@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 def home(request):
     context = {'message': 'Here is a message!'}
-    return render(request, "base.html", context)
+    return render(request, 'team/home.html', context)
