@@ -18,7 +18,7 @@ def roster(request):
         players = paginator.page(1)
     except EmptyPage:
         players = paginator.page(1)
-    return render(request, "team/roster.html", {'roster': roster})
+    return render(request, "team/roster.html", {'players': players})
 
 def player(request, pk):
     player = get_object_or_404(Player, id=pk)

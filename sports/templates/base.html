@@ -8,6 +8,15 @@
         <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
         <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
 	<link href="{{ STATIC_URL }}css/app.css" rel="stylesheet">
+	<link href="{{ STATIC_URL }}css/flexslider.css" rel="stylesheet">
+	<script src="{{ STATIC_URL }}js/jquery.flexslider-min.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+                $(window).load(function() {
+                        $('.flexslider').flexslider();
+                });
+        </script>
+
 
 	<style type=text/css>
 		body{
@@ -16,21 +25,23 @@
 	</style>
 </head>
 <body>
+                <div class="nav">
+			<h2 style="float: left; display: block; margin: 7px 0 0 7px;" >UNC ATHLETICS</h2>
+                        <ul>
+                                <li>Men's Teams
+                                        <ul>
+                                                <li><a href="#">Basketball</a></li>
+                                        </uL>
+                                </li>
+                                <li>Women's Teams
+                                        <ul>
+                                                <li><a href="#">Gymnastics</a></li>       
+                                </li>
+                        </ul>
+                </div>
+
 	<div class="container">
-		<div class="nav">
-			<ul>
-				<li>Men's Teams
-					<ul>
-						<li><a href="#">Basketball</a></li>
-					</uL>
-				</li>
-				<li>Women's Teams
-					<ul>
-						<li><a href="#">Gymnastics</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
+
 		{% block content %}{% endblock %}
 	</div>
 

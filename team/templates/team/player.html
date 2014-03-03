@@ -2,6 +2,17 @@
 {% load humanize %}
 
 {% block content %}
-<p>Player is showing up!!!</p>
+<div class="row">
+	<div class="span6">
+	<img src="{{ player.imgurl }}"/>
+	<ul>
+		<li>Position: {{ player.position }}</li>
+		<li>Year: {{ player.year }}</li>
+		<li>Hometown: {{ player.hometown }}</li>
+		<li> High School: {{ player.high_school }}</li>
+	</ul>
+	</div>
+	<div class="span6"><p>{{ player.story }}</p></div>
+</div>
 {% endblock %}
 
