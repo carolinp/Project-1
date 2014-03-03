@@ -20,4 +20,4 @@ class Player(models.Model):
 
     def save(self, *args, **kwargs):
         self.name = self.name.upper()
-        super(Course, self).save(*args, **kwargs)
+        super(Player, self).save(*args, **kwargs)

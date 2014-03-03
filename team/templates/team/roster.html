@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{% load humanize %}
+
+{% block content %}
+<h2>Roster</h2>
+<ul>
+{% for player in players %}
+<li><a href="{{ player.pk }}">{{ player.name }}</a>
+{% endfor %}
+</ul>
+{% endblock %}
+
