@@ -11,11 +11,25 @@
 	<link href="{{ STATIC_URL }}css/flexslider.css" rel="stylesheet">
 	<script src="{{ STATIC_URL }}js/jquery.flexslider-min.js"></script>
         <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+	<script src="{{ STATIC_URL }}js/instafeed.js"></script>
 	<script type="text/javascript">
-                $(window).load(function() {
-                        $('.flexslider').flexslider();
-                });
-        </script>
+		$(document).ready(function() {
+			console.log("doc ready");
+			instaGram()
+			$('.flexslider').flexslider();
+		});
+		function instaGram(){
+                console.log("instagram");
+      		var feed = new Instafeed({
+                target: 'instafeed',
+        	get: 'tagged',
+        	tagName: 'uncgymnastics',
+        	clientId: '03d078058d18442cba809a4baef6ac2d'
+    		});
+		feed.run();
+		console.log("done");
+		}		
+	</script>
 
 
 	<style type=text/css>
@@ -30,12 +44,38 @@
                         <ul>
                                 <li>Men's Teams
                                         <ul>
+                                                <li><a href="#">Baseball</a></li>
                                                 <li><a href="#">Basketball</a></li>
-                                        </uL>
+                                                <li><a href="#">Cross Country</a></li>
+                                                <li><a href="#">Fencing</a></li>
+                                                <li><a href="#">Football</a></li>
+                                                <li><a href="#">Golf</a></li>
+                                                <li><a href="#">Lacrosse</a></li>
+                                                <li><a href="#">Soccer</a></li>
+                                                <li><a href="#">Swimming & Diving</a></li>
+                                                <li><a href="#">Tennis</a></li>
+                                                <li><a href="#">Track & Field</a></li>
+                                                <li><a href="#">Wrestling</a></li>
+
+
+					</uL>
                                 </li>
                                 <li>Women's Teams
                                         <ul>
-                                                <li><a href="#">Gymnastics</a></li>       
+                                                <li><a href="#">Basketball</a></li>
+                                                <li><a href="#">Cross Country</a></li>
+                                                <li><a href="#">Fencing</a></li>
+                                                <li><a href="#">Field Hockey</a></li>
+                                                <li><a href="#">Golf</a></li>
+                                                <li><a href="roster/">Gymnastics</a></li>       
+                                                <li><a href="#">Lacrosse</a></li>
+                                                <li><a href="#">Rowing</a></li>
+                                                <li><a href="#">Soccer</a></li>
+                                                <li><a href="#">Softball</a></li>
+                                                <li><a href="#">Swimming & Diving</a></li>
+                                                <li><a href="#">Tennis</a></li>
+                                                <li><a href="#">Track & Field</a></li>
+                                                <li><a href="#">Volleyball</a></li>
                                 </li>
                         </ul>
                 </div>
