@@ -2,6 +2,9 @@
 {% load humanize %}
 
 {% block content %}
+<div class="gymheader">
+<h1>Gymnastics</h1>
+</div>
 <h2>Roster</h2>
 <ul>
 {% for player in players %}
@@ -9,6 +12,5 @@
 {% endfor %}
 </ul>
 <div class="span12" id="instafeed"></div>
-
 {% endblock %}
 

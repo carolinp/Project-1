@@ -1,9 +1,34 @@
+@font-face{
+	font-family: freshman;
+	src: url(../fonts/Freshman.ttf);
+}
+@font-face{
+	font-family: tall;
+	src: url(../fonts/Tall_Lean.ttf);
+}
+
+
+h1, h1{
+	font-family: freshman;
+}
+
+body{
+	font-family: tall;
+	font-size: 18pt;
+}
+
+.gymheader {
+	background: url(../images/uncgymnastics1.jpg) no-repeat center center;
+	padding: 150px 300px 150px 300px;
+	color: #FFF;
+}
+
  .nav{
       height:50px;
       position: fixed;
       z-index: 10;
       width: 100%;
-      background-color: #000;
+      background-color: #363636;
       color: #FFF;
   }
   
@@ -30,7 +55,7 @@
         padding-left: 15px;
 }
 .nav ul li:hover {
-		background: #4b545f;
+		background: #363636;
 	}
 .nav ul li:hover a {
 			color: #fff;
@@ -42,7 +67,7 @@
                 text-decoration: none;
 	}
 .nav ul ul {
-	background: #008B8B;
+	background: #56A0D3;
         border-radius: 0px;
         padding: 0;
 	position:
@@ -60,7 +85,7 @@
 			color: #fff;
 		}	
 .nav ul ul li a:hover {
-				background: #2F4F4F;
+				background: #CCC;
 			}
 
 .box {
